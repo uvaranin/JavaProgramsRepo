@@ -44,13 +44,19 @@ public class ContactsPage extends TestBase {
 	public void selectContact() {
 		driver.findElement(By.xpath("//table/tbody/tr")).click();
 		driver.manage().timeouts().implicitlyWait(0, null);
-		driver.switchTo().window(null)
+		driver.switchTo().window(null);
 	}
 	
 	public void clickCreateNewContact(String fname, String lname) {
 		createNewContact.click();
 		firstName.sendKeys(fname);
 		lastName.sendKeys(lname);
+		saveNewContact.click();
+	}
+	public void clickCreateNewContactByDob(String fname, String dob) {
+		createNewContact.click();
+		firstName.sendKeys(fname);
+		lastName.sendKeys(dob);
 		saveNewContact.click();
 	}
 

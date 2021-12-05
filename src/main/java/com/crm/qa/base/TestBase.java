@@ -49,9 +49,9 @@ public class TestBase {
 		driver = firingWebDriver;
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.6, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(6, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
-		driver.switchTo().frame(0)
+		driver.switchTo().frame(0);
 	}
 }
