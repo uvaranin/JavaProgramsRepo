@@ -51,6 +51,10 @@ public class HomePageTest extends TestBase {
 	public void verifyDealsLink() {
 		 dealsPage = homepage.clickOnDeals();
 	}
+	@Test(priority = 4)
+	public void verifyDealsLink() {
+		 dealsPage = homepage.clickOnDeals();
+	}
 	
 	
 	@AfterMethod
